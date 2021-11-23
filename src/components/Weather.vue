@@ -45,7 +45,10 @@ export default {
             this.tokyo.temp = response1.data.main.temp;
             // 大阪の天気
             const city = 'Osaka'
-            const URL2 = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=b5be15b738087fe8fa8cf88985b4125b`;
+            const baseurl = 'https://api.openweathermap.org/data/2.5/weather' 
+            const units = 'metric' // 温度の単位（摂氏）
+            const api = 'b5be15b738087fe8fa8cf88985b4125b' // APIキー
+            const URL2 = `${baseurl}?units=${units}&q=${city}&appid=${api}`;
             const response2 = await axios.get(URL2);
             this.osaka.weather = response2.data.weather[0].main;
             this.osaka.temp = response2.data.main.temp;
