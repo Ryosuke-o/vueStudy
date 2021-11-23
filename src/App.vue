@@ -4,7 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div> -->
   <div id="app">
-    <h1>TODOアプリ</h1>
+    <h1>Weather App</h1>
     <Weathers></Weathers>
   </div>
 </template>
